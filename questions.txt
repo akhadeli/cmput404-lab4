@@ -7,4 +7,7 @@
 3:  We get 404 not found when navigating to /, and it displays us a 404 page stating the request method,
     request url, and url patterns tried
 
-4:
+4:  migrations will create the necessary database tables according to the database settings described in the mysite/settings.py
+    file and existing database migrations. We need this to initialize our database for the models we have defined
+
+5:
