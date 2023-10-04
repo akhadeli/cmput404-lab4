@@ -13,3 +13,7 @@
 5:  I can see that I can add choices and questions, which will add to their respective entries in the database. I can add additional
     users and group. I can also change all existing entries. Custom models will appear if they are registered to appear on the admin panel,
     so that entries can be added/changed.
+
+6:  On /polls/38/ "You're looking at question 38." is displayed. For /polls/38/results/ "You're looking at the results of question 38." is displayed.
+    On /polls/38/vote/ "You're voting on question 38." is displayed. If we put a string instead of a number, we get a 404 not found, with the 404 page being shown.
+    In order allow arbitrary alphabetic characters, we would change '<int:question_id>/' found in the path call on line 8 in polls/urls.py to '<str:question_id>/'.
