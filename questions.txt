@@ -1,0 +1,10 @@
+1: https://github.com/akhadeli/cmput404-lab4
+
+2:  A success page stating: "The install worked successfully! Congratulations!" and
+    "You are seeing this page because DEBUG=True is in your settings file and you have not configured any URLs."
+    This is a base page at the start of django projects.
+
+3:  We get 404 not found when navigating to /, and it displays us a 404 page stating the request method,
+    request url, and url patterns tried
+
+4:
