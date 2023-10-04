@@ -10,4 +10,6 @@
 4:  migrations will create the necessary database tables according to the database settings described in the mysite/settings.py
     file and existing database migrations. We need this to initialize our database for the models we have defined
 
-5:
+5:  I can see that I can add choices and questions, which will add to their respective entries in the database. I can add additional
+    users and group. I can also change all existing entries. Custom models will appear if they are registered to appear on the admin panel,
+    so that entries can be added/changed.
