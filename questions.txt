@@ -17,3 +17,13 @@
 6:  On /polls/38/ "You're looking at question 38." is displayed. For /polls/38/results/ "You're looking at the results of question 38." is displayed.
     On /polls/38/vote/ "You're voting on question 38." is displayed. If we put a string instead of a number, we get a 404 not found, with the 404 page being shown.
     In order allow arbitrary alphabetic characters, we would change '<int:question_id>/' found in the path call on line 8 in polls/urls.py to '<str:question_id>/'.
+
+7:  If the url scheme changes in your program, you would have to rewrite every instance of the url in your templates, which defeats the purpose of the templates,
+    and adds more work.
+
+8:  The size of the code using generic views (class based views) is generally smaller, since you don't have to write repeat code. Using generic views is also more
+    fitting to the concept of views as a class that builds a view object, rather than a function that renders out the view. Generic views are also more friendly to
+    templating concepts, since you can inherit functionalities from existing view templates, making production faster. A case where I believe you would not use a 
+    generic view, is when there are branches to multiple views that involved. In that case it would make more sense to implement a function which can render and
+    redirect a user viewing the page. More complex views tend to be function based, since they are more versatile, rather than template-optimized. You would really
+    use generic views, if your views share many attributes, so that you can take advantage of subclassing.
